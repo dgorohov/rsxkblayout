@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
       - uses: actions/download-artifact@v3
         with:
-          name: rsxklayout
+          name: rsxkblayout
 
       - id: create_release
         uses: actions/create-release@v1
