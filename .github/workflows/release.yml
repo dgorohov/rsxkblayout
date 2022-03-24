@@ -1,21 +1,38 @@
+name: release
+
 on:
-  workflow_run:
-    workflows: [ "build" ]
-    branches: [ main ]
-    types:
-      - completed
   push:
     tags:
       - 'v*'
 
+env:
+  CARGO_TERM_COLOR: always
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features
+      - uses: actions/upload-artifact@v3
+        with:
+          name: rsxkblayout
+          path: target/release/rsxkblayout
+
   release:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - uses: actions/download-artifact@v3
         with:
           name: rsxkblayout
