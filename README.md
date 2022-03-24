@@ -1,4 +1,4 @@
-Display current Xkb layout as `i3block` block. It listens for Xkb events and detects then the keyboard layout has changed.
+Displays current Xkb layout as `i3block` block. It listens for Xkb events and detects then the keyboard layout has changed.
 
 Example of `i3block` configuration:
 
@@ -8,12 +8,12 @@ command=~/.config/i3blocks/language/rsxkblayout
 interval=persist
 format=json
 ```
+* Actually, `format` and `interval` should be `json` and `persist` respectively :)
+
 
 ![Capture](capture.png)
 
-
-No configurations currently available. Black on white text displaying current layout.
-
+No configurations currently available. Black text on white displaying current layout.
 
 Example of X11 configuration:
 
@@ -30,5 +30,5 @@ EndSection
 ```
 
 
-![Build](https://github.com/dgorohov/rsxkblayout/actions/workflows/release.yml/badge.svg)
+![Build](https://github.com/dgorohov/rsxkblayout/actions/workflows/rust.yml/badge.svg)
 
