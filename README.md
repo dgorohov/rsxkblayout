@@ -30,5 +30,5 @@ EndSection
 ```
 
 
-![Build](https://github.com/dgorohov/rsxkblayout/actions/workflows/rust.yml/badge.svg)
+![Build](https://github.com/dgorohov/rsxkblayout/actions/workflows/release.yml/badge.svg)
 

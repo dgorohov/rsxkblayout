@@ -36,6 +36,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: rsxkblayout
+          path: ./
 
       - id: create_release
         uses: actions/create-release@v1
@@ -51,6 +52,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/release/rsxkblayout
+          asset_path: rsxkblayout
           asset_name: rsxkblayout
           asset_content_type: application/octet-stream
