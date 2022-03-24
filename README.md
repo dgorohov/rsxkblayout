@@ -29,3 +29,6 @@ Section "InputClass"
 EndSection
 ```
 
+
+![Build](https://github.com/dgorohov/rsxkblayout/actions/workflows/rust.yml/badge.svg)
+
