@@ -15,15 +15,17 @@ format=json
 
 No configurations currently available. Black text on white displaying current layout.
 
-Example of X11 configuration:
+Haven't tested it on a different configurations yet. If you've issues, please post your keyboard configuration and the error you're getting.
+
+X11 configuration I am using currently for the keyboard:
 
 ```
 Section "InputClass"
 	Identifier	"keyboard"
 	Driver		"evdev"
 	MatchIsKeyboard	"on"
-	Option 		"XkbModel" 	    "pc105"
-	Option		"XkbLayout"	    "se,ru"
+	Option 		"XkbModel" 	"pc105"
+	Option		"XkbLayout"	"se,ru"
 	Option		"XkbVariant"	"nodeadkeys"
 	Option 		"XkbOptions" 	"grp:alt_shift_toggle"
 EndSection
